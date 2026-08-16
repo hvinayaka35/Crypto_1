@@ -5,7 +5,7 @@ project:
   discord:      ""
   description:  "Bit-serial Montgomery NTT butterfly shared across all three NIST PQC moduli"
   language:     "Verilog"
-  clock_hz:     40000000
+  clock_hz:     28000000
 
   # How many tiles your design occupies? A single tile is about 167x108 uM.
   tiles: "1x1"
