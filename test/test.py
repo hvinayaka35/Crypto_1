@@ -24,7 +24,7 @@ async def tick(dut, n=1):
 
     Reading a signal in the same delta as the rising edge returns its
     pre-edge value, so every edge is followed by a short settle delay. The
-    delay is well inside the 25 ns period and also covers the UNIT_DELAY
+    delay is well inside the 35 ns period and also covers the UNIT_DELAY
     annotations used in gate-level simulation.
     """
     await ClockCycles(dut.clk, n)
@@ -85,7 +85,7 @@ async def run_butterfly(dut, a, b, w, sel):
 @cocotb.test()
 async def test_reset_and_idle(dut):
     """Reset clears the datapath and the unit reports neither busy nor done."""
-    cocotb.start_soon(Clock(dut.clk, 25, unit="ns").start())
+    cocotb.start_soon(Clock(dut.clk, 35, unit="ns").start())
     await reset(dut)
     assert int(dut.uo_out.value) == 0
     status = int(dut.uio_out.value)
@@ -97,7 +97,7 @@ async def test_reset_and_idle(dut):
 @cocotb.test()
 async def test_known_vectors(dut):
     """Hand-checked corner vectors for each scheme."""
-    cocotb.start_soon(Clock(dut.clk, 25, unit="ns").start())
+    cocotb.start_soon(Clock(dut.clk, 35, unit="ns").start())
     await reset(dut)
 
     for sel in (0, 1, 2):
@@ -123,7 +123,7 @@ async def test_known_vectors(dut):
 @cocotb.test()
 async def test_randomised_all_schemes(dut):
     """Randomised sweep across all three moduli."""
-    cocotb.start_soon(Clock(dut.clk, 25, unit="ns").start())
+    cocotb.start_soon(Clock(dut.clk, 35, unit="ns").start())
     await reset(dut)
     rng = random.Random(0xC0FFEE)
 
@@ -148,7 +148,7 @@ async def test_scheme_switch_without_reset(dut):
     This is the property the design exists to demonstrate, so it is checked
     without the reset that the other tests use between vectors.
     """
-    cocotb.start_soon(Clock(dut.clk, 25, unit="ns").start())
+    cocotb.start_soon(Clock(dut.clk, 35, unit="ns").start())
     await reset(dut)
     rng = random.Random(1234)
 
@@ -165,7 +165,7 @@ async def test_scheme_switch_without_reset(dut):
 @cocotb.test()
 async def test_latency_matches_model(dut):
     """Cycle count from start to done must be k+5 for each scheme."""
-    cocotb.start_soon(Clock(dut.clk, 25, unit="ns").start())
+    cocotb.start_soon(Clock(dut.clk, 35, unit="ns").start())
     await reset(dut)
 
     for sel in (0, 1, 2):
@@ -192,7 +192,7 @@ async def test_latency_matches_model(dut):
 @cocotb.test()
 async def test_no_x_on_outputs(dut):
     """No output may be X or Z at any point during a full transaction."""
-    cocotb.start_soon(Clock(dut.clk, 25, unit="ns").start())
+    cocotb.start_soon(Clock(dut.clk, 35, unit="ns").start())
     await reset(dut)
 
     async def check():
