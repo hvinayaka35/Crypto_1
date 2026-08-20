@@ -28,7 +28,7 @@ module tb ();
 `endif
 
   // Replace tt_um_vinayaka_ntt_bfly with your module name:
-  tt_um_vinayaka_ntt_bfly user_project (
+  tt_um_pqc_ntt_bfly user_project (
 
       // Include power ports for the Gate Level test:
 `ifdef GL_TEST
