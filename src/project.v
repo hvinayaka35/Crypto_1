@@ -21,7 +21,7 @@
 
 `default_nettype none
 
-module tt_um_vinayaka_ntt_bfly (
+module tt_um_pqc_ntt_bfly (
     input  wire [7:0] ui_in,    // Dedicated inputs  - operand byte stream
     output wire [7:0] uo_out,   // Dedicated outputs - result byte stream
     input  wire [7:0] uio_in,   // IOs: Input path   - control
