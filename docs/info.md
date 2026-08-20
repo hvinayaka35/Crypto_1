@@ -6,6 +6,16 @@ You can also include images in this folder and reference them in the markdown. E
 512 kb in size, and the combined size of all images must be less than 1 MB.
 -->
 
+## Credits
+
+We gratefully acknowledge the Center of Excellence (CoE) in Integrated Circuits and Systems (ICAS)
+and the Department of Electronics and Communication Engineering (ECE) for providing the necessary
+resources and guidance.
+
+Special thanks to Dr. H V Ravish Aradhya (HoD - ECE), Dr. K R Usha Rani (Associate Dean - PG),
+Dr. K. S. Geetha (Vice Principal) and Dr. K. N. Subramanya (Principal) for their constant
+encouragement and support in facilitating this Tiny Tapeout SKY25A submission.
+
 ## How it works
 
 This is a **crypto-agile Number Theoretic Transform (NTT) butterfly unit** that supports the
@@ -101,12 +111,3 @@ wm = 710 · 2^12 mod 3329 = 1943
 None. The design is driven entirely over the dedicated and bidirectional TT pins; a Raspberry Pi
 Pico running the standard `tt-micropython-firmware`, or the TT commander UI, is sufficient.
 
-## Credits
-
-We gratefully acknowledge the Center of Excellence (CoE) in Integrated Circuits and Systems (ICAS)
-and the Department of Electronics and Communication Engineering (ECE) for providing the necessary
-resources and guidance.
-
-Special thanks to Dr. H V Ravish Aradhya (HoD - ECE), Dr. K R Usha Rani (Associate Dean - PG),
-Dr. K. S. Geetha (Vice Principal) and Dr. K. N. Subramanya (Principal) for their constant
-encouragement and support in facilitating this Tiny Tapeout SKY25A submission.
