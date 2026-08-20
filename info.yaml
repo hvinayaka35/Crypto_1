@@ -1,7 +1,7 @@
 # Tiny Tapeout project information
 project:
   title:        "Crypto-Agile NTT Butterfly (ML-KEM / ML-DSA / FN-DSA)"
-  author:       "H Vinayaka"
+  author:       "H Vinayaka, Abu Arshian , Shylashree N, RV College of Engineering"
   discord:      ""
   description:  "Bit-serial Montgomery NTT butterfly shared across all three NIST PQC moduli"
   language:     "Verilog"
@@ -11,7 +11,7 @@ project:
   tiles: "1x1"
 
   # Your top module name must start with "tt_um_". Make it unique by including your github username:
-  top_module:  "tt_um_vinayaka_ntt_bfly"
+  top_module:  "tt_um_pqc_ntt_bfly"
 
   # List your project's source files here.
   # Source files must be in ./src and you must list each source file separately, one per line.
